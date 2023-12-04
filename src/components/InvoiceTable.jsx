@@ -1,3 +1,4 @@
+import './InvoiceTable.css'
 import axios from "axios";
 
 import AddButton from './AddButton.jsx'
@@ -22,7 +23,7 @@ const InvoiceTable = () => {
 
     const addRow = () => {
 
-        axios.post(`/invoice`, {name: `New name`})
+        axios.post(`/invoice`, {name: `Customer Name`})
             .then((res) => {
                 setCurrentData(res.data)
             })
@@ -43,7 +44,7 @@ const InvoiceTable = () => {
     }
 
     const row = currentData.map((el) => <TableRow
-    initialInvoice={el}
+    initialInvoiceData={el}
     intialEditMode={false}
     key={el.id}
     deleteRow={() => deleteRow(el.id)}

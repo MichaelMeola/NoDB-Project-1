@@ -1,13 +1,13 @@
 import React from "react";
 
-function AddButton(props){
+const AddButton = (props) => {
 
     const {addRow} = props
 
     return (
         <tr>
             <td></td>
-            <td>
+            <td colSpan='4'>
                 <button onClick={addRow}>Add Customer</button>
             </td>
         </tr>

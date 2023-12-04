@@ -1,14 +1,14 @@
 import React from "react";
 
-function Name(props) {
-    const {isEditing, value, setDescription} = props
+const Name = (props) => {
+    const {isEditing, value, setName} = props
 
     return isEditing ? (
         <td>
             <input
             type="text"
             value={value}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             />
         </td>
     ) : (

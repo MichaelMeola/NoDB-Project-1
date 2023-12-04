@@ -1,8 +1,8 @@
 let customersData = [
-    {id: 0, name: 'Michael', shirts: 69 },
-    {id: 1, name: 'Gabe', shirts: 3 },
-    {id: 2, name: 'Jacob', shirts: 0 },
-    {id: 3, name: 'Hannah', shirts: 6 }
+    {id: 0, name: 'Michael', shirts: 69, price: 25 },
+    {id: 1, name: 'Gabe', shirts: 3, price: 25 },
+    {id: 2, name: 'Jacob', shirts: 0, price: 25 },
+    {id: 3, name: 'Hannah', shirts: 6, price: 25 }
 ]
 
 let globalId = 4
@@ -19,7 +19,8 @@ const handlerFunctions = {
         const newCustomer = {
             id: globalId,
             name: name,
-            shirts: 0
+            shirts: 0,
+            price: 0
         }
         customersData.push(newCustomer)
 
@@ -40,12 +41,13 @@ const handlerFunctions = {
 
     editInvoice: (req, res) => {
         const {id} = req.params
-        const {name, shirts} = req.body
+        const {name, shirts, price} = req.body
         
         const editCustomer = customersData.find((customer) => customer.id === +id)
 
         editCustomer.name = name
         editCustomer.shirts = shirts
+        editCustomer.price = price
 
         res.send(customersData)
     }

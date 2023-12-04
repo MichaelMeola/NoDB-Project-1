@@ -8,7 +8,7 @@ const Shirts = (props) => {
       <input
       type="text"
       value={value}
-      onChange={(e) => setHours(e.target.value)}
+      onChange={(e) => setShirts(e.target.value)}
       />
     </td>
   ) : (

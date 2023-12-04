@@ -1,11 +1,12 @@
 import React from "react";
 
-function TableHeader(){
+const TableHeader = () => {
     return (
         <tr>
             <th></th>
             <th>Name</th>
             <th>Shirts</th>
+            <th>Price</th>
             <th>Total</th>
         </tr>
     )
